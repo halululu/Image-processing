@@ -1,3 +1,4 @@
+画像は縦550画像，横800画素のディジタルカラー画像である．
 
 ORG=imread('Lenna.png'); % 原画像の入力
 imagesc(ORG); axis image; % 画像の表示
