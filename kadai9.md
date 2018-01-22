@@ -1,26 +1,26 @@
-%メディアンフィルタと先鋭化
-画像は縦550画像，横800画素のディジタルカラー画像である．
-メディアンフィルターを適用し，ノイズ除去する.
-以下のプログラムを用いてノイズを除去する.
+%メディアンフィルタと先鋭化  
+画像は縦550画像，横800画素のディジタルカラー画像である．  
+メディアンフィルターを適用し，ノイズ除去する.  
+以下のプログラムを用いてノイズを除去する.  
 
 
-ORG = imread('https://user-images.githubusercontent.com/34636430/34911525-a747cd6a-f90f-11e7-902e-50e7a29854bd.png'); % 画像の読み込み
-ORG = rgb2gray(ORG); % 白黒濃淡画像に変換
-imagesc(ORG); colormap(gray); colorbar; % 画像の表示
-pause;
-ORG = imnoise(ORG,'salt & pepper',0.02); % ノイズ添付
-imagesc(ORG); colormap(gray); colorbar; % 画像の表示
-pause;
-IMG = filter2(fspecial('average',3),ORG); % 平滑化フィルタで雑音除去
-imagesc(IMG); colormap(gray); colorbar; % 画像の表示
-pause;
-IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
-imagesc(IMG); colormap(gray); colorbar; % 画像の表示
-pause;
-f=[0,-1,0;-1,5,-1;0,-1,0]; % フィルタの設計
-IMG = filter2(f,IMG,'same'); % フィルタの適用
-imagesc(IMG); colormap(gray); colorbar; % 画像の表示
-pause;
+ORG = imread('https://user-images.githubusercontent.com/34636430/34911525-a747cd6a-f90f-11e7-902e-50e7a29854bd.png'); % 画像の読み込み  
+ORG = rgb2gray(ORG); % 白黒濃淡画像に変換  
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示  
+pause;  
+ORG = imnoise(ORG,'salt & pepper',0.02); % ノイズ添付  
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示  
+pause;  
+IMG = filter2(fspecial('average',3),ORG); % 平滑化フィルタで雑音除去  
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示  
+pause;  
+IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去  
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示  
+pause;  
+f=[0,-1,0;-1,5,-1;0,-1,0]; % フィルタの設計  
+IMG = filter2(f,IMG,'same'); % フィルタの適用  
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示  
+pause;  
 
 
 実行結果  
