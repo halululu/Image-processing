@@ -1,9 +1,9 @@
-画像は縦550画像，横800画素のディジタルカラー画像である．
-判別分析法を用いて画像二値化を行う．
+画像は縦550画像，横800画素のディジタルカラー画像である．  
+判別分析法を用いて画像二値化を行う．  
 
-ORG=imread('Lenna.png'); % 原画像の入力
-imagesc(ORG); axis image; % 画像の表示
-によって，原画像を読み込み，表示した結果を図１に示す．
+ORG=imread('Lenna.png'); % 原画像の入力  
+imagesc(ORG); axis image; % 画像の表示  
+によって，原画像を読み込み，表示した結果を図１に示す．  
 
 ![hana0](https://user-images.githubusercontent.com/34636430/34911525-a747cd6a-f90f-11e7-902e-50e7a29854bd.png)  
 図1 原画像
